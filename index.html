@@ -1,82 +1,128 @@
-<!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
 <head>
-  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-       More info: h5bp.com/b/378 -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>One Page Resume</title>
 
-  <title></title>
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
-  <!-- CSS: implied media=all -->
-  <!-- CSS concatenated and minified via ant build script-->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- end CSS-->
-
-  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
-
-  <!-- All JavaScript at the bottom, except for Modernizr / Respond.
-       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
-       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
-  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+  <style type="text/css">
+    * { margin: 0; padding: 0; }
+    body { font: 15px Helvetica, Sans-Serif; line-height: 24px; background: url(images/noise.jpg); }
+    .clear { clear: both; }
+    #page-wrap { width: 800px; margin: 40px auto 60px; }
+    #pic { font-family: Georgia; font-size: 240px; float: right; margin: 72px -52px 0px 0px; color: #333; }
+    h1 { margin: 0 0 15px 0; padding: 0 0 15px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
+    h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
+    h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 15px; color: #999; font-weight: normal; }
+    h3 { color: #999; font-size: 15px; margin: 0 0 6px 0; }
+    p { margin: 0 0 15px 0; }
+    a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
+    a:hover { border-bottom-style: solid; color: black; }
+    ul { margin: 0 0 8px 1.5em; }
+    #objective { width: 500px; float: left; }
+    #objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
+    dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 80px; border-right: 1px solid #999;  }
+    dd { width: 600px; float: right; }
+    dd.clear { float: none; margin: 0; height: 8px; }
+  </style>
 </head>
 
 <body>
 
-  <div id="container">
-    <header>
+    <div id="page-wrap">
 
-    </header>
-    <div id="main" role="main">
-        Hello world!
+        <div id="pic">*</div>
+    
+        <div id="contact-info" class="vcard">
+        
+            <!-- Microformats! -->
+        
+            <h1 class="fn">Ben Tsai</h1>
+        
+            <p>
+                Cell: <span class="tel">412-726-1972</span><br />
+                Email: <a class="email" href="mailto:bentsai@gmail.com">bentsai@gmail.com</a><br />
+                Address: 3197 Shady Ave Ext, Pittsburgh, PA 15217
+            </p>
+        </div>
+                
+        <div id="objective">
+            <p>
+            I have a passion for crafting beautiful software that reflects truth while embracing the constraints of reality. I pursue elegant solutions with the vigorous attitude that "there has got to be a better way."
+            </p>
+        </div>
+        
+        <div class="clear"></div>
+        
+        <dl>
+            <dd class="clear"></dd>
+            
+            <dt>Experience</dt>
+
+            <dd>
+            <h2>Software Design Solutions <span>Apr 2005 - present</span></h2>
+            <h3>Technologist and Developer</h3>
+                <p>As the company's first full-time hire, I've made core contributions to the company processes and culture. I incorporated healthy development practices into our process: test-driven development (TDD), continuous integration (CI), and automated builds and deployment. I'm constantly on the lookout for new tools and practices that will improve the bottom line.</p>
+                <p>My software development experience has covered all software lifecycle stages from inception through design, implementation, debugging, verification and maintenance. I have the ability to work successfully at a spectrum of areas: e.g. writing embedded bootloader code, optimizing graphics algorithms, and designing user interfaces.</p>
+            <h3>Recent Project Work</h3>
+            <ul>
+                <li>Building a web application and server code on Windows CE platform.</li>
+                <li>Implementing a user interface based on the jQuery Mobile framework.</li>
+            </ul> 
+            </dd>
+
+            <dd>
+            <h2>Philips Respironics <span>Aug 2009 - Mar 2011</span></h2>
+            <h3>Software Consultant</h3>
+            <ul>
+                <li>Worked as an integral team member in the sleep diagnostics group.</li>
+                <li>Optimized drawing code performance by an order of magnitude, which was critical to the first release of the product.</li>
+                <li>Established a continuous integration system and automated build/deployment process. This completely automated pushing new releases to QA.</li>
+            </ul> 
+            </dd>
+
+            <dd>
+            <h2>Vocollect <span>May 2007 - Nov 2008</span></h2>
+            <h3>Software Consultant</h3>
+            <ul>
+                <li>Worked as a member of the mobile applications group.</li>
+                <li>Augmented automated build system by extending testing to actual hardware.</li>
+                <li>Wrote command server that ran on multiple Windows Mobile and CE devices to trigger reboots and run tests.</li>
+            </ul> 
+            </dd>
+
+            <dd class="clear"></dd>
+            
+            <dt>Skills</dt>
+            <dd>
+                <ul>
+                    <li>C#, C, C++, .NET, Winforms, NUnit, Visual Studio</li>
+                    <li>JavaScript, jQuery, jQuery Mobile, HTML/CSS</li>
+                    <li>NAnt, MSBuild, TeamCity, CruiseControl.NET</li>
+                    <li>Mercurial, Git, Subversion</li>
+                    <li>Vim, Python
+                </ul>
+            </dd>
+
+            <dd class="clear"></dd>
+            
+            <dt>Education</dt>
+            <dd>
+                <h2>Carnegie Mellon University <span>1997 - 2001</span></h2>
+                <p><strong>Major:</strong> B.S. Electrical &amp; Computer Engineering</p>
+            </dd>
+            
+            <dd class="clear"></dd>
+
+        </dl>
+        
+        <div class="clear"></div>
+    
     </div>
-    <footer>
 
-    </footer>
-  </div> <!--! end of #container -->
-
-
-  <!-- JavaScript at the bottom for fast page loading -->
-
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
-
-
-  <!-- scripts concatenated and minified via ant build script-->
-  <script defer src="js/plugins.js"></script>
-  <script defer src="js/script.js"></script>
-  <!-- end scripts-->
-
-	
-  <!-- Change UA-XXXXX-X to be your site's ID -->
-  <script>
-    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
-    Modernizr.load({
-      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
-    });
-  </script>
-
-
-  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
-       chromium.org/developers/how-tos/chrome-frame-getting-started -->
-  <!--[if lt IE 7 ]>
-    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-  <![endif]-->
-  
 </body>
+
 </html>
